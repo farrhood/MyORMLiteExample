@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/content_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16sp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="ninja.farhood.myormliteexample.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <EditText
+        android:id="@+id/newRecordInput"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/hint_add"/>
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newRecordInput"
+        android:layout_marginLeft="30dp"
+        android:onClick="addRecord"
+        android:text="@string/add"/>
+
+    <Button
+        android:id="@+id/deleteAllButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newRecordInput"
+        android:layout_marginLeft="62dp"
+        android:layout_toRightOf="@+id/addButton"
+        android:onClick="deleteAllRecords"
+        android:text="@string/delete_data"/>
+
+    <ListView
+        android:id="@+id/recordsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addButton"/>
+
+</RelativeLayout>
